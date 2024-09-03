@@ -1,0 +1,15 @@
+CREATE TABLE `cyclistic`.`202300-tripdata` (
+  `ride_id` VARCHAR(16) NOT NULL,
+  `rideable_type` TEXT NULL DEFAULT NULL,
+  `started_at` TEXT NULL DEFAULT NULL,
+  `ended_at` TEXT NULL DEFAULT NULL,
+  `start_station_id` TEXT NULL DEFAULT NULL,
+  `start_station_name` TEXT NULL DEFAULT NULL,
+  `end_station_id` TEXT NULL DEFAULT NULL,
+  `end_station_name` TEXT NULL DEFAULT NULL,
+  `start_lat` TEXT NULL DEFAULT '',
+  `start_lng` TEXT NULL DEFAULT '',
+  `end_lat` TEXT NULL DEFAULT '',
+  `end_lng` TEXT NULL DEFAULT '',
+  `member_casual` TEXT NULL DEFAULT NULL,
+  UNIQUE INDEX `ride_id_UNIQUE` (`ride_id` ASC));
