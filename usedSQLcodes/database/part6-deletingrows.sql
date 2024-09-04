@@ -1,6 +1,7 @@
 -- All trips that did not have an ending lng/lat were removed, as trips that did not end appropriately were not needed
 -- SQL_SAFE_UPDATES changed to 0 then back to 1 each deletion, to allow for deleting, since it is not allowed in safe mode
 -- Every time if the trip did not have ending lat, then it did not have ending lng. Both SQL codes ran for practice.
+-- After running the code, I would check that the number of rows removed would match up to the number of rows returned in Part 5
 
 -- For Jan
 SET SQL_SAFE_UPDATES = 0
