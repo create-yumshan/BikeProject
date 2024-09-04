@@ -23,6 +23,12 @@ CREATE TABLE `cyclistic`.`202301-tripdata` (
   UNIQUE INDEX `ride_id_UNIQUE` (`ride_id` ASC));
 
 
+-- After being able to actually view the uploaded data, I could better determine the datatype each column should be.
+-- I had to be careful not to lose any data when chaning the types.
+-- started_at and ended_at were clearly in date and time format
+-- The lat and lng columns were varying in length, so I chose an appropriate decimal length for the data to become a little more uniform
+-- I rearranged the column locations just to have a little more organization
+
 -- Altered table datatype to reflect below
 CREATE TABLE `202301-tripdata` (
   `ride_id` varchar(16) NOT NULL,
