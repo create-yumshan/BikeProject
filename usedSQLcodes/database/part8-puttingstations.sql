@@ -9,7 +9,13 @@ INSERT IGNORE INTO
 cyclistic.`stations` (station_name, station_id) 
 SELECT 
 start_station_name,  
-start_station_id,
+start_station_id
+FROM 
+cyclistic.`202301-tripdata`
+
+INSERT IGNORE INTO  
+cyclistic.`stations` (station_name, station_id) 
+SELECT 
 end_station_name,
 end_station_id
 FROM 
@@ -24,7 +30,13 @@ INSERT IGNORE INTO
 cyclistic.`stations` (station_name, station_id) 
 SELECT 
 start_station_name,  
-start_station_id,
+start_station_id
+FROM 
+cyclistic.`202302-tripdata`
+
+INSERT IGNORE INTO  
+cyclistic.`stations` (station_name, station_id) 
+SELECT
 end_station_name,
 end_station_id
 FROM 
@@ -39,7 +51,13 @@ INSERT IGNORE INTO
 cyclistic.`stations` (station_name, station_id) 
 SELECT 
 start_station_name,  
-start_station_id,
+start_station_id
+FROM 
+cyclistic.`202303-tripdata`
+
+INSERT IGNORE INTO  
+cyclistic.`stations` (station_name, station_id) 
+SELECT
 end_station_name,
 end_station_id
 FROM 
@@ -54,7 +72,13 @@ INSERT IGNORE INTO
 cyclistic.`stations` (station_name, station_id) 
 SELECT 
 start_station_name,  
-start_station_id,
+start_station_id
+FROM 
+cyclistic.`202304-tripdata`
+
+INSERT IGNORE INTO  
+cyclistic.`stations` (station_name, station_id) 
+SELECT
 end_station_name,
 end_station_id
 FROM 
@@ -69,7 +93,13 @@ INSERT IGNORE INTO
 cyclistic.`stations` (station_name, station_id) 
 SELECT 
 start_station_name,  
-start_station_id,
+start_station_id
+FROM 
+cyclistic.`202305-tripdata`
+
+INSERT IGNORE INTO  
+cyclistic.`stations` (station_name, station_id) 
+SELECT
 end_station_name,
 end_station_id
 FROM 
@@ -84,7 +114,13 @@ INSERT IGNORE INTO
 cyclistic.`stations` (station_name, station_id) 
 SELECT 
 start_station_name,  
-start_station_id,
+start_station_id
+FROM 
+cyclistic.`202306-tripdata`
+
+INSERT IGNORE INTO  
+cyclistic.`stations` (station_name, station_id) 
+SELECT
 end_station_name,
 end_station_id
 FROM 
@@ -99,7 +135,13 @@ INSERT IGNORE INTO
 cyclistic.`stations` (station_name, station_id) 
 SELECT 
 start_station_name,  
-start_station_id,
+start_station_id
+FROM 
+cyclistic.`202307-tripdata`
+
+INSERT IGNORE INTO  
+cyclistic.`stations` (station_name, station_id) 
+SELECT
 end_station_name,
 end_station_id
 FROM 
@@ -114,7 +156,13 @@ INSERT IGNORE INTO
 cyclistic.`stations` (station_name, station_id) 
 SELECT 
 start_station_name,  
-start_station_id,
+start_station_id
+FROM 
+cyclistic.`202308-tripdata`
+
+INSERT IGNORE INTO  
+cyclistic.`stations` (station_name, station_id) 
+SELECT
 end_station_name,
 end_station_id
 FROM 
@@ -129,7 +177,13 @@ INSERT IGNORE INTO
 cyclistic.`stations` (station_name, station_id) 
 SELECT 
 start_station_name,  
-start_station_id,
+start_station_id
+FROM 
+cyclistic.`202309-tripdata`
+
+INSERT IGNORE INTO  
+cyclistic.`stations` (station_name, station_id) 
+SELECT
 end_station_name,
 end_station_id
 FROM 
@@ -144,7 +198,13 @@ INSERT IGNORE INTO
 cyclistic.`stations` (station_name, station_id) 
 SELECT 
 start_station_name,  
-start_station_id,
+start_station_id
+FROM 
+cyclistic.`202310-tripdata`
+
+INSERT IGNORE INTO  
+cyclistic.`stations` (station_name, station_id) 
+SELECT
 end_station_name,
 end_station_id
 FROM 
@@ -159,7 +219,13 @@ INSERT IGNORE INTO
 cyclistic.`stations` (station_name, station_id) 
 SELECT 
 start_station_name,  
-start_station_id,
+start_station_id
+FROM 
+cyclistic.`202311-tripdata`
+
+INSERT IGNORE INTO  
+cyclistic.`stations` (station_name, station_id) 
+SELECT
 end_station_name,
 end_station_id
 FROM 
@@ -174,7 +240,13 @@ INSERT IGNORE INTO
 cyclistic.`stations` (station_name, station_id) 
 SELECT 
 start_station_name,  
-start_station_id,
+start_station_id
+FROM 
+cyclistic.`202312-tripdata`
+
+INSERT IGNORE INTO  
+cyclistic.`stations` (station_name, station_id) 
+SELECT
 end_station_name,
 end_station_id
 FROM 
