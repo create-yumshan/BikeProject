@@ -43,11 +43,15 @@ Data downloaded from here: https://divvy-tripdata.s3.amazonaws.com/index.html
 After downloading the data onto a private computer, it was uploaded into [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) on the desktop.
 A dataset was then created in a password protected connection. 
 
-## Creating the Dataset
+## Creating the Database
 All data was uploaded into MySQL Workbench. Primarily, creating tables was done by using MySQL Workbench's "Create Table" feature. I was unable to view the csv. data hardly at all due to the large size, so I uploaded all data into columns as "TEXT" datatype to be able to view and begin cleaning and manipulating without altering. Please view here.
 
-## Cleaning and Manipulating
-Please view here.
+Parts 01-08 focus on creating a database and making sure everything in the database was going to be useful data, which included clearing any data that did not have ending coordinates. No ending coordinates means the bicycle did not log the ride distance. The bicycle may have been pulled for maintenance, had the GPS altered or broken, among other reasons. No ending stations were not an issue, as it could mean that the guest just ended their ride outside of any destination (house, store, restaurant), to then begin again at another time.
+![Screenshot 2024-08-18 153257](https://github.com/user-attachments/assets/0c8c0b31-7ea4-4909-8c6e-1ec2147133ca)
+
+
+Parts 09-13 focus on making sure all remaining data is useful and cleaned. 
+
 
 ## Analysis
 
