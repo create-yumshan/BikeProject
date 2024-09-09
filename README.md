@@ -1,16 +1,17 @@
 # Cyclistic:Fictional Bike-Share Company
 **Google Data Analytics Case Study**
 ## About the fictional company 
-   In 2016, Cyclistic launched a successful bike-share program. Since then, the program has grown. They have bicycles that are geotracked and locked into a network of stations across Chicago. Cyclistic sets itself apart by also offering reclining bikes, hand tricycles, and cargo bikes, making bike-share more inclusive to people with disabilities and riders who can’t use a standard two-wheeled bike. The majority of riders opt for traditional bikes and about 8% of riders use the assistive options. The bikes can be unlocked from one station and returned to any other station in the system anytime. Cyclistic users are more likely to ride for leisure, but about 30% use the bikes to commute to work each day. Which leads to the different pricing plans that are offered:
+   In 2016, Cyclistic launched a successful bike-share program. Since then, the program has grown. They have bicycles that are geotracked and locked into a network of stations across Chicago. Cyclistic sets itself apart by also offering reclining bikes, hand tricycles, and cargo bikes, making bike-share more inclusive to people with disabilities and riders who can’t use a standard two-wheeled bike. The majority of riders opt for traditional bikes and about 8% of riders use the assistive options. The bikes can be unlocked from one station and returned to any other station in the system anytime. Cyclistic users are more likely to ride for leisure, but about 30% use the bikes to commute to work each day. This leads to the different pricing plans that are offered:
 *    single-ride passes,
 *    full one-day passes, and 
 *    annual memberships. 
-Customers who purchase single-ride or full-day passes are referred to as casual riders. Customers who purchase annual memberships are Cyclistic members.
+
+   Customers who purchase single-ride or full-day passes are referred to as casual riders. Customers who purchase annual memberships are Cyclistic members.
 
 ##  Problem at Hand
    Cyclistic’s finance analysts have concluded that annual members are much more profitable than casual riders. Lily Moreno, director of marketing, believes that maximizing the number of annual members will be key to future growth. Rather than creating a marketing campaign that targets all-new customers, Moreno believes there is a solid opportunity to convert casual riders into members. She notes that casual riders are already aware of the Cyclistic program and have chosen Cyclistic for their mobility needs. Moreno has set a clear goal: Design marketing strategies aimed at converting casual riders into annual members. In order to do that, however, the team needs to better understand how annual members and casual riders differ. 
    
-The question being investigated for this case study is: **"How do annual members and casual riders use Cyclistic bikes differently?"**
+   The question being investigated for this case study is: **"How do annual members and casual riders use Cyclistic bikes differently?"**
 
 Deliverables will include the following:
 1. A description of all data sources used
@@ -44,17 +45,27 @@ Year of 2023 trip data is used in this project (202301-202312)
 
 ## How the Data is Being Kept and Investigated
 After downloading the data onto a private computer, it was uploaded into [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) on the desktop.
-A dataset was then created in a password protected connection. 
+A database was then created in a password protected connection. 
 
 ## Creating the [Database](https://github.com/create-yumshan/BikeProject/tree/9808a529e4ffef83de34bef013b308afcbf5775a/usedSQLcodes/database)
-All data was uploaded into MySQL Workbench. Primarily, creating tables was done by using MySQL Workbench's "Create Table" feature. I was unable to view the csv. data hardly at all due to the large size, so I uploaded all data into columns as "TEXT" datatype ([Part 01](https://github.com/create-yumshan/BikeProject/blob/9808a529e4ffef83de34bef013b308afcbf5775a/usedSQLcodes/database/part01-creatingtables.sql) to be able to view the data without it being altered upon uploading.
+All data was uploaded into MySQL Workbench. Before starting I had to add to the Advanced settings on MySQL Workbench to include "OPT_LOCAL_INFILE=1". I also had to turn on the local infile in a SQL query. Following that, I could finally begin downloading data. I came across the problem that loading data using the "Table Data Import Wizard" was absolutely horrendous and would not allow for uploading properly. So to remedy that I found another solution. Primarily, creating tables was done by using MySQL Workbench's "Create Table" feature with almost all datatypes set as "TEXT". I was unable to view the csv. data hardly at all due to the large size, so I uploaded all data to be able to view the data without it being altered upon uploading. See how ([here-Part 01](https://github.com/create-yumshan/BikeProject/blob/9808a529e4ffef83de34bef013b308afcbf5775a/usedSQLcodes/database/part01-creatingtables.sql) 
 
-Parts 01-08 focus on creating a database and making sure everything in the database was going to be useful data, which included clearing any data that did not have ending coordinates. No ending coordinates means the bicycle did not log the ride distance. The bicycle may have been pulled for maintenance, had the GPS altered or broken, among other reasons. No ending stations were not an issue, as it could mean that the guest just ended their ride outside of any destination (house, store, restaurant), to then begin again at another time.
-Parts 09-13 focus on making sure all remaining data is useful and cleaned. This wrapped up each table in the whole database and ensures analysis can begin.
+Parts 01-08 focus on creating a database and making sure everything in the database was going to be useful data, which included clearing any data that did not have ending coordinates. No ending coordinates means the bicycle did not log the ride distance. The bicycle may have been pulled for maintenance, had the GPS altered or broken, among other reasons. No starting or ending stations were an issue, as it could mean that the guest just ended their ride outside of any destination (house, store, restaurant), to then begin again at another time or vice versa. As long as there were coordinates to begin or end the ride, I left as is. 
 
-
+Parts 09-13 focus on making sure all remaining data is useful and cleaned. This wrapped up each table in the whole database and ensures analysis can begin. I then ended with a database consisting of these tables:
 ![Screenshot 2024-08-18 153257](https://github.com/user-attachments/assets/0c8c0b31-7ea4-4909-8c6e-1ec2147133ca)
 
+[Part 14](https://github.com/create-yumshan/BikeProject/blob/99b2f28cc45905bf09787e6383b2591e1439aa1e/usedSQLcodes/database/part14-addstationlatlng.sql) shows that I felt it was actually better to have a station table with the coordinates for later on when I want to map out all the stations. I added back the coordinates in the best way I knew how, though it was very repetitive and probably not the most accurate way of completing that task. 
+
+Parts 15-16 go on to process the data further to add [ride length](https://github.com/create-yumshan/BikeProject/blob/99b2f28cc45905bf09787e6383b2591e1439aa1e/usedSQLcodes/database/part15-findridelength.sql) and [day of the week](https://github.com/create-yumshan/BikeProject/blob/99b2f28cc45905bf09787e6383b2591e1439aa1e/usedSQLcodes/database/part16-finddayofweek.sql). I left each table as month specific and did not feel the need to combine them together for a master table as it is a lot of data, and I can use JOINs and UNIONS, etc to combine specific data if I must. 
+
+   A view of the table set up
+![image](https://github.com/user-attachments/assets/f4cf37a1-60e9-4042-ad2b-43b20b8c79bd)
+
+   A view of the metadata
+![image](https://github.com/user-attachments/assets/c2a89191-eb55-4d33-8e19-1e46fcc6f918)
+
+Analysis can now begin.
 
 ## Analysis
 
