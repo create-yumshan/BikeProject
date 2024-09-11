@@ -52,7 +52,7 @@ All data was uploaded into MySQL Workbench. Before starting I had to add to the 
 
 Parts 01-08 focus on creating a database and making sure everything in the database was going to be useful data, which included clearing any data that did not have ending coordinates. No ending coordinates means the bicycle did not log the ride distance. The bicycle may have been pulled for maintenance, had the GPS altered or broken, among other reasons. No starting or ending stations were an issue, as it could mean that the guest just ended their ride outside of any destination (house, store, restaurant), to then begin again at another time or vice versa. As long as there were coordinates to begin or end the ride, I left as is. 
 
-Parts 09-13 focus on making sure all remaining data is useful and cleaned. This wrapped up each table in the whole database and ensures analysis can begin. I then ended with a database consisting of these tables:
+Parts 09-13 focus on making sure all remaining data is useful and cleaned. I then ended with a database consisting of these tables:
 
 ![Screenshot 2024-08-18 153257](https://github.com/user-attachments/assets/0c8c0b31-7ea4-4909-8c6e-1ec2147133ca)
 
@@ -70,8 +70,18 @@ Parts 15-17 go on to process the data further to add [ride duration](https://git
 Analysis can now begin.
 
 ## Analysis
+Here I look back at my question: **"How do annual members and casual riders use Cyclistic bikes differently?"** Creating two different tables for members and casual riders seemed best, which I did in [Part 1](https://github.com/create-yumshan/BikeProject/blob/571d2599c4d265da0218257f104765b555e303f4/usedSQLcodes/analysis/part01-createmembertablecasualtable.sql) of the analysis section. I pulled in all the data from each table of 12 months so that I can make better comparisons of the data over the whole year.
+
+   Essesntially I made sure that I conducted a members vs. casual riders analysis.
+
+   I found each these between the members and casual riders:
+   * number of rides per month, sorted from most to least
+   * number of rides per bike type, sorted from most to least
+   * popular starting and ending stations, top 3
+   * number of rides per day of week, sorted from most to least
+     
 
 ## Visualizations
 
-## Educated Recommendations
+## Analysis-based Recommendations
 
