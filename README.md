@@ -48,22 +48,24 @@ After downloading the data onto a private computer, it was uploaded into [MySQL 
 A database was then created in a password protected connection. 
 
 ## Creating the [Database](https://github.com/create-yumshan/BikeProject/tree/9808a529e4ffef83de34bef013b308afcbf5775a/usedSQLcodes/database)
-All data was uploaded into MySQL Workbench. Before starting I had to add to the Advanced settings on MySQL Workbench to include "OPT_LOCAL_INFILE=1". I also had to turn on the local infile in a SQL query. Following that, I could finally begin downloading data. I came across the problem that loading data using the "Table Data Import Wizard" was absolutely horrendous and would not allow for uploading properly. So to remedy that I found another solution. Primarily, creating tables was done by using MySQL Workbench's "Create Table" feature with almost all datatypes set as "TEXT". I was unable to view the csv. data hardly at all due to the large size, so I uploaded all data to be able to view the data without it being altered upon uploading. See how ([here-Part 01](https://github.com/create-yumshan/BikeProject/blob/9808a529e4ffef83de34bef013b308afcbf5775a/usedSQLcodes/database/part01-creatingtables.sql) 
+All data was uploaded into MySQL Workbench. Before starting I had to add to the Advanced settings on MySQL Workbench to include "OPT_LOCAL_INFILE=1". I also had to turn on the local infile in a SQL query. Following that, I could finally begin downloading data. I came across the problem that loading data using the "Table Data Import Wizard" was absolutely horrendous and would not allow for uploading properly. So to remedy that I found another solution. Primarily, creating tables was done by using MySQL Workbench's "Create Table" feature with almost all datatypes set as "TEXT". I was unable to view the csv. data hardly at all due to the large size, so I uploaded all data to be able to view the data without it being altered upon uploading. See how [here-Part 01](https://github.com/create-yumshan/BikeProject/blob/9808a529e4ffef83de34bef013b308afcbf5775a/usedSQLcodes/database/part01-creatingtables.sql) 
 
 Parts 01-08 focus on creating a database and making sure everything in the database was going to be useful data, which included clearing any data that did not have ending coordinates. No ending coordinates means the bicycle did not log the ride distance. The bicycle may have been pulled for maintenance, had the GPS altered or broken, among other reasons. No starting or ending stations were an issue, as it could mean that the guest just ended their ride outside of any destination (house, store, restaurant), to then begin again at another time or vice versa. As long as there were coordinates to begin or end the ride, I left as is. 
 
 Parts 09-13 focus on making sure all remaining data is useful and cleaned. This wrapped up each table in the whole database and ensures analysis can begin. I then ended with a database consisting of these tables:
+
 ![Screenshot 2024-08-18 153257](https://github.com/user-attachments/assets/0c8c0b31-7ea4-4909-8c6e-1ec2147133ca)
 
 [Part 14](https://github.com/create-yumshan/BikeProject/blob/99b2f28cc45905bf09787e6383b2591e1439aa1e/usedSQLcodes/database/part14-addstationlatlng.sql) shows that I felt it was actually better to have a station table with the coordinates for later on when I want to map out all the stations. I added back the coordinates in the best way I knew how, though it was very repetitive and probably not the most accurate way of completing that task. 
 
-Parts 15-16 go on to process the data further to add [ride length](https://github.com/create-yumshan/BikeProject/blob/99b2f28cc45905bf09787e6383b2591e1439aa1e/usedSQLcodes/database/part15-findridelength.sql) and [day of the week](https://github.com/create-yumshan/BikeProject/blob/99b2f28cc45905bf09787e6383b2591e1439aa1e/usedSQLcodes/database/part16-finddayofweek.sql). I left each table as month specific and did not feel the need to combine them together for a master table as it is a lot of data, and I can use JOINs and UNIONS, etc to combine specific data if I must. 
+Parts 15-17 go on to process the data further to add [ride duration](https://github.com/create-yumshan/BikeProject/blob/1c3c45cff71beb58b406ceaa70eac58ba7cbecc9/usedSQLcodes/database/part15-findrideduration.sql) , [day of the week](https://github.com/create-yumshan/BikeProject/blob/99b2f28cc45905bf09787e6383b2591e1439aa1e/usedSQLcodes/database/part16-finddayofweek.sql) and [ride distance](https://github.com/create-yumshan/BikeProject/blob/1c3c45cff71beb58b406ceaa70eac58ba7cbecc9/usedSQLcodes/database/part17-finddistance.sql). I left each table as month specific and did not feel the need to combine them together for a master table as it is a lot of data, and I can use JOINs and UNIONS, etc to combine specific data if I must. 
 
-   A view of the table set up
-![image](https://github.com/user-attachments/assets/f4cf37a1-60e9-4042-ad2b-43b20b8c79bd)
+   A view of the table set up 
+   ![tablesetup](https://github.com/create-yumshan/BikeProject/blob/4e9c57f76fb0fbd3d20f5b2de77df4eef60abd3d/usedSQLcodes/database/viewtable.png)
+   
 
    A view of the metadata
-![image](https://github.com/user-attachments/assets/c2a89191-eb55-4d33-8e19-1e46fcc6f918)
+   ![Metadatatable](https://github.com/create-yumshan/BikeProject/blob/4e9c57f76fb0fbd3d20f5b2de77df4eef60abd3d/usedSQLcodes/database/viewtablemetadata.png)
 
 Analysis can now begin.
 
