@@ -2,6 +2,9 @@
 -- I did not change SQL_SAFE_UPDATES every time, but left it as a reminder to do so.
 -- Checked each time to make sure the new data was inputted accordingly
 
+-- Multiplying .000621371192 is to change the distance from meters to miles. I chose miles because the study is based on rides in Chicago.
+-- After seeing the values returned from multiplying, I decided to just keep data to the 3rd decimal to understand the general length of the rides.
+
 -- For Jan
 ALTER TABLE cyclistic.`202301-tripdata`
 ADD COLUMN ride_distance DECIMAL(5,3) DEFAULT '0'
