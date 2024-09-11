@@ -1,6 +1,6 @@
 -- Adding the members to members table, and casuals to casuals table
--- Insert into prevents duplicates
--- I dropped the member_casual column in each table (members table, casual table)
+-- INSERT INTO prevents duplicates
+-- I dropped the member_casual column in each table (members table, casual table). Can be viewed at the very end.
 
 -- For Jan
 INSERT INTO
