@@ -90,11 +90,13 @@ All the answers where then added to a Google Spreadsheet file so that they can b
 The total number of rides for members was much higher than casual riders.
 
    As seen below:
+   
 ![totalnumber](https://github.com/create-yumshan/BikeProject/blob/6873d5e37a797c4fcad981cf9c8f55d2b1380edf/usedSQLcodes/visualizations/Total%20Member%20vs.%20Casual%20Rides%20in%202023.png)
 
 Both casual and member riders more frequently rode during the summer months, and riders where often longer then(during summer months) as well. 
 
    As seen below:
+   
 ![membermonth](https://github.com/create-yumshan/BikeProject/blob/390f978b096c374e9992fcecdc8b881ad56a04ce/usedSQLcodes/visualizations/Members%20Rides%20per%20Month.png)
 ![casualmonth](https://github.com/create-yumshan/BikeProject/blob/390f978b096c374e9992fcecdc8b881ad56a04ce/usedSQLcodes/visualizations/Casual%20Rides%20per%20Month.png)
 ![membermonthavg](https://github.com/create-yumshan/BikeProject/blob/390f978b096c374e9992fcecdc8b881ad56a04ce/usedSQLcodes/visualizations/Member's%20Average%20Ride%20Duration%20per%20Month.png)
@@ -103,6 +105,7 @@ Both casual and member riders more frequently rode during the summer months, and
 Members rode bicycles more often during the week than casual riders, likely reflecting that members use the bicycles for commuting to work. Ride duration on the weekend for both members and casual riders were longer than during the week, which is not surprising as bicycle rides on the weekend could be longer due to people having more time.
 
    As seen below:
+   
 ![memberweek](https://github.com/create-yumshan/BikeProject/blob/050534549bf1c6e51770611006dea0c0a705980a/usedSQLcodes/visualizations/Members%20Total%20Rides%20per%20Day%20of%20the%20Week.png)
 ![casualweek](https://github.com/create-yumshan/BikeProject/blob/050534549bf1c6e51770611006dea0c0a705980a/usedSQLcodes/visualizations/Casual%20Riders%20Total%20Rides%20per%20Day%20of%20Week.png)
 ![memberweekavg](https://github.com/create-yumshan/BikeProject/blob/050534549bf1c6e51770611006dea0c0a705980a/usedSQLcodes/visualizations/Members%20Average%20Ride%20Duration%20per%20Day%20of%20Week.png)
@@ -111,6 +114,7 @@ Members rode bicycles more often during the week than casual riders, likely refl
 It seems that casual riders enjoy the electric bicycles just slightly more often than classic bicycles, while members enjoyed classic bicycles a little more than electric bicycles.
 
    As seen below:
+   
 ![membertype](https://github.com/create-yumshan/BikeProject/blob/050534549bf1c6e51770611006dea0c0a705980a/usedSQLcodes/visualizations/Members%20Choice%20of%20Bicycle%20Type.png)
 ![casualtype](https://github.com/create-yumshan/BikeProject/blob/050534549bf1c6e51770611006dea0c0a705980a/usedSQLcodes/visualizations/Casual%20Riders%20Choice%20of%20Bicycle%20Type.png)
 
@@ -118,6 +122,7 @@ It seems that casual riders enjoy the electric bicycles just slightly more often
 Casual riders' popular starting and ending stations were exactly the same. The member's starting and ending stations were slight different in popularity, but generally reflected that the starting and ending stations were equally popular, just like for the casual riders. 
 
    As seen below:
+   
 ![memberstart](https://github.com/create-yumshan/BikeProject/blob/050534549bf1c6e51770611006dea0c0a705980a/usedSQLcodes/visualizations/Member's%20Top%205%20Popular%20Starting%20Stations.png)
 ![memberend](https://github.com/create-yumshan/BikeProject/blob/050534549bf1c6e51770611006dea0c0a705980a/usedSQLcodes/visualizations/Member's%20Top%205%20Popular%20Ending%20Stations.png)
 ![casualstart](https://github.com/create-yumshan/BikeProject/blob/050534549bf1c6e51770611006dea0c0a705980a/usedSQLcodes/visualizations/Casual%20Rider's%20Top%205%20Popular%20Starting%20Stations.png)
@@ -127,10 +132,21 @@ Casual riders' popular starting and ending stations were exactly the same. The m
 The top longest rides for the members was the same length for around 40 rides. It can be assumed that the same rider(s) where often taking a long trip as the longest rides did not have an ending station ID, and just ending latitude and longitude coordinates in similar locations by just slight varying degrees. The casual riders had varying lengths of ride durations, but all pretty long. The longest ride being over 8 days long. It may be an error, or that the guest did not properly end their ride, or just a very determined rider. 
 
    As seen below:
+   
 ![memberlong](https://github.com/create-yumshan/BikeProject/blob/050534549bf1c6e51770611006dea0c0a705980a/usedSQLcodes/visualizations/Member's%20Top%205%20Longest%20Rides.png)
 ![casuallong](https://github.com/create-yumshan/BikeProject/blob/050534549bf1c6e51770611006dea0c0a705980a/usedSQLcodes/visualizations/Casual%20Rider's%20Top%205%20Longest%20Rides.png)
 
 
 
 ## Analysis-based Recommendations
+
+Here are a few notable differences I would like to highlight:
+   * Casual riders are less likely to ride than members, particularly on weekdays.
+   * Electric bicycles may be a little more appealing to casual riders than classic bicycles.
+   * The stations frequented by casual riders were different than ones by members.
+   * Some casual riders really like to go for very long rides/trips.
+
+To work to target more casual members, I would recommend trying to advertise Cyclistic at stations that more casual riders frequent. At those stations, weekday promotions for members could be offered for rides that are a predetermined ride duration that casual riders may be able to find appealing for their commute home. Such promotions could also be offered from rides that start at stations the casual riders find popular. 
+
+There maybe be a lot of errors as this is my first ever project. Thank you. 
 
