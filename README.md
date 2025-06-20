@@ -88,6 +88,8 @@ All the answers where then added to a Google Spreadsheet file so that they can b
 ## Visualizations
 
 The total number of rides for members was much higher than casual riders.
+(https://github.com/create-yumshan/BikeProject/blob/6873d5e37a797c4fcad981cf9c8f55d2b1380edf/usedSQLcodes/visualizations/Total%20Member%20vs.%20Casual%20Rides%20in%202023.png)
+
 
 Both casual and member riders more frequently rode during the summer months, and riders where often longer then(during summer months) as well. 
 
