@@ -88,10 +88,13 @@ All the answers where then added to a Google Spreadsheet file so that they can b
 ## Visualizations
 
 The total number of rides for members was much higher than casual riders.
-[totalnumber](https://github.com/create-yumshan/BikeProject/blob/6873d5e37a797c4fcad981cf9c8f55d2b1380edf/usedSQLcodes/visualizations/Total%20Member%20vs.%20Casual%20Rides%20in%202023.png)
-
+![totalnumber](https://github.com/create-yumshan/BikeProject/blob/6873d5e37a797c4fcad981cf9c8f55d2b1380edf/usedSQLcodes/visualizations/Total%20Member%20vs.%20Casual%20Rides%20in%202023.png)
 
 Both casual and member riders more frequently rode during the summer months, and riders where often longer then(during summer months) as well. 
+![membermonth](https://github.com/create-yumshan/BikeProject/blob/390f978b096c374e9992fcecdc8b881ad56a04ce/usedSQLcodes/visualizations/Members%20Rides%20per%20Month.png)
+![casualmonth](https://github.com/create-yumshan/BikeProject/blob/390f978b096c374e9992fcecdc8b881ad56a04ce/usedSQLcodes/visualizations/Casual%20Rides%20per%20Month.png)
+![membermonthavg](https://github.com/create-yumshan/BikeProject/blob/390f978b096c374e9992fcecdc8b881ad56a04ce/usedSQLcodes/visualizations/Member's%20Average%20Ride%20Duration%20per%20Month.png)
+![casualmonthavg](https://github.com/create-yumshan/BikeProject/blob/390f978b096c374e9992fcecdc8b881ad56a04ce/usedSQLcodes/visualizations/Casual%20Rider's%20Average%20Ride%20Duration%20per%20Month.png)
 
 Members rode bicycles more often during the week than casual riders, likely reflecting that members use the bicycles for commuting to work. Ride duration on the weekend for both members and casual riders were longer than during the week, which is not surprising as bicycle rides on the weekend could be longer due to people having more time.
 
