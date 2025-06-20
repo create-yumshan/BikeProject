@@ -72,19 +72,32 @@ Analysis can now begin.
 ## Analysis
 Here I look back at my question: **"How do annual members and casual riders use Cyclistic bikes differently?"** Creating two different tables for members and casual riders seemed best, which I did in [Part 1](https://github.com/create-yumshan/BikeProject/blob/571d2599c4d265da0218257f104765b555e303f4/usedSQLcodes/analysis/part01-createmembertablecasualtable.sql) of the analysis section. I pulled in all the data from each table of 12 months so that I can make better comparisons of the data over the whole year.
 
-   Essesntially I made sure that I conducted a members vs. casual riders analysis The code used can be found here for members and here for casual riders.
+   Essesntially I made sure that I conducted a members vs. casual riders analysis The code used for members can be found [here](https://github.com/create-yumshan/BikeProject/blob/f74c679593e44209e8f147eb68fb1910aced63c5/usedSQLcodes/analysis/memberanalysis.sql) and for casual riders [here](https://github.com/create-yumshan/BikeProject/blob/f74c679593e44209e8f147eb68fb1910aced63c5/usedSQLcodes/analysis/casualanalysis.sql) .
 
    I found each these between the members and casual riders:
+   * total number of rides per each
    * number of rides per month, sorted from most to least
-   * number of rides per bike type, sorted from most to least
-   * popular starting and ending stations, top 3
    * number of rides per day of week, sorted from most to least
-   * longest ride (the shortest I determined should be 1 minute, as less than a minute did not seem to be really appropriate for a bicycle ride)
+   * number of rides per bike type, sorted from most to least
+   * popular starting and ending stations, top 5
+   * longest rides, top 5 (the shortest I determined should be 1 minute, as less than a minute did not seem to be really appropriate for a bicycle ride)
 
 All the answers where then added to a Google Spreadsheet file so that they can be viewed and referred back to. They were already added to the Google Spreadsheet file to begin the next step, Visualizations.
      
 
 ## Visualizations
+
+The total number of rides for members was much higher than casual riders.
+
+Both casual and member riders more frequently rode during the summer months, and riders where often longer then(during summer months) as well. 
+
+Members rode bicycles more often during the week than casual riders, likely reflecting that members use the bicycles for commuting to work. Ride duration on the weekend for both members and casual riders were longer than during the week, which is not surprising as bicycle rides on the weekend could be longer due to people having more time.
+
+It seems that casual riders enjoy the electric bicycles just slightly more often than classic bicycles, while members enjoyed classic bicycles a little more than electric bicycles.
+
+Casual riders' popular starting and ending stations were exactly the same. The member's starting and ending stations were slight different in popularity, but generally reflected that the starting and ending stations were equally popular, just like for the casual riders. 
+
+The top longest rides for the members was the same length for around 40 rides. It can be assumed that the same rider(s) where often taking a long trip as the longest rides did not have an ending station ID, and just ending latitude and longitude coordinates in similar locations by just slight varying degrees. The casual riders had varying lengths of ride durations, but all pretty long. The longest ride being over 8 days long. It may be an error, or that the guest did not properly end their ride, or just a very determined rider. 
 
 
 
