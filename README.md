@@ -79,6 +79,7 @@ Here I look back at my question: **"How do annual members and casual riders use 
    * number of rides per bike type, sorted from most to least
    * popular starting and ending stations, top 3
    * number of rides per day of week, sorted from most to least
+   * longest ride (the shortest I determined should be 1 minute, as less than a minute did not seem to be really appropriate for a bicycle ride)
      
 
 ## Visualizations
