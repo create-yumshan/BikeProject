@@ -169,3 +169,43 @@ SET SQL_SAFE_UPDATES = 1
 
 SELECT *
 FROM cyclistic.`202312-tripdata`
+
+
+-- Realized after there are ride durations under a minute, which does not really constitute as a ride, so I removed those rows
+-- First checked to see how many rows needed to be removed from each table (members, casual)
+
+SELECT
+ride_id,
+ride_duration
+FROM
+cyclistic.`members`
+WHERE
+ride_duration < '1'
+ORDER BY
+2 asc
+-- 96186
+
+SELECT
+ride_id,
+ride_duration
+FROM
+cyclistic.`casual`
+WHERE
+ride_duration < '1'
+ORDER BY
+2 asc
+-- 53428
+
+SET SQL_SAFE_UPDATES = 0
+
+DELETE FROM 
+cyclistic.`members`
+WHERE
+ride_duration < '1'
+
+DELETE FROM 
+cyclistic.`casual`
+WHERE
+ride_duration < '1'
+
+SET SQL_SAFE_UPDATES = 1
