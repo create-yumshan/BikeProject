@@ -72,7 +72,7 @@ Analysis can now begin.
 ## Analysis
 Here I look back at my question: **"How do annual members and casual riders use Cyclistic bikes differently?"** Creating two different tables for members and casual riders seemed best, which I did in [Part 1](https://github.com/create-yumshan/BikeProject/blob/571d2599c4d265da0218257f104765b555e303f4/usedSQLcodes/analysis/part01-createmembertablecasualtable.sql) of the analysis section. I pulled in all the data from each table of 12 months so that I can make better comparisons of the data over the whole year.
 
-   Essesntially I made sure that I conducted a members vs. casual riders analysis.
+   Essesntially I made sure that I conducted a members vs. casual riders analysis The code used can be found here for members and here for casual riders.
 
    I found each these between the members and casual riders:
    * number of rides per month, sorted from most to least
@@ -80,9 +80,13 @@ Here I look back at my question: **"How do annual members and casual riders use 
    * popular starting and ending stations, top 3
    * number of rides per day of week, sorted from most to least
    * longest ride (the shortest I determined should be 1 minute, as less than a minute did not seem to be really appropriate for a bicycle ride)
+
+All the answers where then added to a Google Spreadsheet file so that they can be viewed and referred back to. They were already added to the Google Spreadsheet file to begin the next step, Visualizations.
      
 
 ## Visualizations
+
+
 
 ## Analysis-based Recommendations
 
